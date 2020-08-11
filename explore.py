@@ -19,8 +19,8 @@ if __name__ == '__main__':
         print('\n')
 
         # checks number of instances for each language
-        print(f'Number of Dutch text: {sum(df_msg["label"] == "nl")}')
-        print(f'Number of English text: {sum(df_msg["label"] == "en")}')
+        print(f'Number of Dutch messages: {sum(df_msg["label"] == "nl")}')
+        print(f'Number of English messages: {sum(df_msg["label"] == "en")}')
 
         print('\n')
 

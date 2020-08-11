@@ -7,11 +7,21 @@ Provides utility functions for reading and processing data.
 
 import pandas as pd
 import string
+from sklearn.model_selection import train_test_split
 
 
 def read_data(filename):
     """reads given txt file into a pandas dataframe and returns it"""
     return pd.read_csv(filename, sep='|', names=['label', 'message'])
+
+
+def split_data(df):
+    """
+    splits data and returns training and testing sets for x and y
+    return in the order of: x_train, x_test, y_train, y_test
+    """
+    feature, target = df['message'], df['label']
+    return train_test_split(feature, target, test_size=0.5, random_state=101)
 
 
 def clean_message(msg):
