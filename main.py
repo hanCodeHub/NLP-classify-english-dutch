@@ -8,6 +8,7 @@ Inputs messages in English or Dutch into ML model.
 from data import *
 from model import predict_label
 from sklearn.naive_bayes import MultinomialNB
+import sys
 
 
 def predict_language(message, classifier=MultinomialNB):
@@ -38,6 +39,13 @@ if __name__ == '__main__':
         print(f'Predicting English message: {en_msg}')
         pred_en = predict_language(en_msg)
         print(f'Predicted language: {pred_en}')
+
+        # attempts prediction of user message
+        print()
+        prompt = 'Please provide a message in either English or Dutch:\n'
+        user_msg = input(prompt)
+        pred_user = predict_language(user_msg)
+        print(f'Predicted language: {pred_user}')
 
     except Exception as e:
         print(f'could not execute script: {e}')

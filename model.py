@@ -60,7 +60,7 @@ if __name__ == '__main__':
         print('Results for Naive Bayes classifier:')
         output_results(y_test, nb_pred)
 
-        print('\n')
+        print()
 
         # predicts with Random Forest classifier and output results to terminal
         rf_pred = predict_label(x_test, RandomForestClassifier,

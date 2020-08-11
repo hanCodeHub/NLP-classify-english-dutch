@@ -14,15 +14,15 @@ if __name__ == '__main__':
         # reads and outputs head of dataframe to terminal
         df_msg = read_data('raw_text.txt')
         print('Original dataframe:')
-        print(df_msg.head())
+        print(df_msg)
 
-        print('\n')
+        print()
 
         # checks number of instances for each language
         print(f'Number of Dutch messages: {sum(df_msg["label"] == "nl")}')
         print(f'Number of English messages: {sum(df_msg["label"] == "en")}')
 
-        print('\n')
+        print()
 
         # explores difference in length between en and nl text
         df_msg['length'] = df_msg['message'].apply(len)
