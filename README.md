@@ -15,9 +15,8 @@ This project contains files for a machine learning program to predict the
 Each of the following files has a specific purpose and can be run separately to
   see the output in the terminal. Run using either command line or an IDE:
  
-`main.py` is the main execution file. Run this directly via the command line
-  or IDE to see 2 example messages being classified (1 Dutch and 1 English
-  ). Then it will ask for input to classify a message string provided by the
+`main.py` is the main execution file. Run this file to see 2 example messages
+ being classified (1 Dutch and 1 English). Then it will ask for input to classify a message string provided by the
    user.
   
 `explore.py` is for exploratory analysis of the dataset. Run this file to see

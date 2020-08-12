@@ -8,7 +8,6 @@ Inputs messages in English or Dutch into ML model.
 from data import *
 from model import predict_label
 from sklearn.naive_bayes import MultinomialNB
-import sys
 
 
 def predict_language(message, classifier=MultinomialNB):
